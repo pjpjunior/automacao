@@ -1,4 +1,4 @@
-String lerSerial = "0";   // for incoming serial data
+String lerSerial = "0";  
 int botao1 = 16;
 int botao2 = 17;
 int botao3 = 18;
@@ -9,10 +9,12 @@ bool lerBotao3 ;
 bool lerBotao4 ;
 
 void setup() {
- pinMode(2, OUTPUT);
+
+  pinMode(2, OUTPUT);
   pinMode(3, OUTPUT);
   pinMode(4, OUTPUT);
   pinMode(5, OUTPUT);  // botoes
+ 
  digitalWrite(2, HIGH);
  digitalWrite(3, HIGH);
  digitalWrite(4, HIGH);
@@ -99,35 +101,11 @@ void loop() {
         Serial.println("led4 desligado");}
         else if (digitalRead(5) == LOW) {
         Serial.println("led4 ligado");}
-  /*  }
 
-    else if (lerSerial == "led12") {
-      digitalWrite(12, !digitalRead(12));
-      lerSerial = "0";
-      if (digitalRead(12) == HIGH) {
-        Serial.println("led12 ligado");}
-        else if (digitalRead(12) == LOW) {
-        Serial.println("led12 desligado");}
-    }
-
-    else if (lerSerial == "led13") {
-      digitalWrite(13, !digitalRead(13));
-      lerSerial = "0";
-      if (digitalRead(13) == HIGH) {
-        Serial.println("led13 ligado");}
-        else if (digitalRead(13) == LOW) {
-        Serial.println("led13 desligado");}
-*/
     }
 
 
   }
-
-
-
-
-
-
 
 }
 
